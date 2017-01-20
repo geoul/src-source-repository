@@ -23,10 +23,10 @@ public class Example2 {
 				int englishScore = 77;
 				int economyScore = 60;
 				
-				System.out.print("프로그래밍 점수 : " + programmingScore);
-				System.out.print("수학 점수 : " + mathScore);
-				System.out.print("알고리즘 점수 : " + algorithmScore);
-				System.out.print("영어 점수 : " + englishScore);
+				System.out.print("프로그래밍 점수 : " + programmingScore + ", ");
+				System.out.print("수학 점수 : " + mathScore + ", ");
+				System.out.print("알고리즘 점수 : " + algorithmScore + ", ");
+				System.out.print("영어 점수 : " + englishScore + ", ");
 				System.out.println("경제 점수 : " + economyScore);
 				
 				int sum = programmingScore + mathScore + algorithmScore + englishScore + economyScore;
@@ -50,23 +50,39 @@ public class Example2 {
 			} 
 			else if(selectInput == 3) {
 				
-				double weight = 45;
-				double height = 176 * 0.01;
+				System.out.print("체중 입력 : ");
+				double weight = input.nextDouble();
 				
-				// BMI(비만도) 계산하기 (비만도 = 체중(kg)/신장(m2))
+				System.out.print("신장(키) 입력 : ");
+				double height = input.nextDouble() * 0.01;
+				
+//				System.out.print("성별(남자/여자) 입력 : ");
+//				String selectGender = input.next();
+				
+//				 BMI(비만도) 계산하기 (비만도 = 체중(kg)/신장(m2))
 				double Bmi = weight / (height * height);
 				
-				if(Bmi <= 18.5) {
-					System.out.println("BMI(비만도) : " + Bmi + ", 저체중 입니다."); 
-				} else if(Bmi <= 23) {
-					System.out.println("BMI(비만도) : " + Bmi + ", 정상 입니다."); 
-				} else if(Bmi <= 25) {
-					System.out.println("BMI(비만도) : " + Bmi + ", 과체중 입니다."); 
-				} else if(Bmi <= 30) {
-					System.out.println("BMI(비만도) : " + Bmi + ", 비만 입니다."); 
-				} else {
-					System.out.println("BMI(비만도) : " + Bmi + ", 고도비만 입니다."); 
-				}
+//				if(selectGender == "여자") {
+					if(Bmi <= 18.5) {
+						System.out.println("BMI(비만도) : " + Bmi + ", 저체중 입니다."); 
+					} else if(Bmi <= 23) {
+						System.out.println("BMI(비만도) : " + Bmi + ", 정상 입니다."); 
+					} else if(Bmi <= 25) {
+						System.out.println("BMI(비만도) : " + Bmi + ", 과체중 입니다."); 
+					} else if(Bmi <= 30) {
+						System.out.println("BMI(비만도) : " + Bmi + ", 비만 입니다."); 
+					} else {
+						System.out.println("BMI(비만도) : " + Bmi + ", 고도비만 입니다."); 
+					}
+//				} else {
+//					if(Bmi <= 14.33) {
+//						System.out.println("BMI(비만도) : " + Bmi + ", 저체중 입니다."); 
+//					} else if(Bmi <= 19.15) {
+//						System.out.println("BMI(비만도) : " + Bmi + ", 정상 입니다."); 
+//					} else {
+//						System.out.println("BMI(비만도) : " + Bmi + ", 과체중 입니다."); 
+//					}
+//				}
 				
 			} 
 			else {
