@@ -17,17 +17,16 @@ public class Example2 {
 			
 			if(selectInput == 1) {
 				
-				int programmingScore = 98;
-				int mathScore = 80;
-				int algorithmScore = 85;
-				int englishScore = 77;
-				int economyScore = 60;
-				
-				System.out.print("프로그래밍 점수 : " + programmingScore + ", ");
-				System.out.print("수학 점수 : " + mathScore + ", ");
-				System.out.print("알고리즘 점수 : " + algorithmScore + ", ");
-				System.out.print("영어 점수 : " + englishScore + ", ");
-				System.out.println("경제 점수 : " + economyScore);
+				System.out.print("프로그래밍 점수 : ");
+				int programmingScore = input.nextInt();
+				System.out.print("수학 점수 : ");
+				int mathScore = input.nextInt();
+				System.out.print("알고리즘 점수 : ");
+				int algorithmScore = input.nextInt();
+				System.out.print("영어 점수 : ");
+				int englishScore = input.nextInt();
+				System.out.print("경제 점수 : ");
+				int economyScore = input.nextInt();
 				
 				int sum = programmingScore + mathScore + algorithmScore + englishScore + economyScore;
 				double average = sum / 5.0;
