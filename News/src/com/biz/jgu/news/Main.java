@@ -16,14 +16,6 @@ public class Main {
 		Scanner input = new Scanner(System.in);
 		int chooseMenu = 0;
 		
-		List<NewsVO> newsList = null;
-		NewsVO newsVO = null;
-		
-		// 임시로 데이터를 받을 변수들
-		String titleTemp = "";
-		String pressTemp = "";
-		String nameTemp = "";
-		
 		while( true ) {
 			System.out.println("========== 뉴스 제목 조회 ==========");
 			System.out.println("1. 전체 뉴스 조회");
@@ -34,27 +26,10 @@ public class Main {
 			chooseMenu = input.nextInt();
 			
 			if( chooseMenu == 1 ) {
-				newsList = newsBiz.queryAllNews();
-				for( NewsVO news : newsList) {
-					System.out.printf("뉴스 제목 : %s, 언론사 : %s, 기자이름 : %s\n", 
-							news.getTitle(), news.getPress(), news.getName());
-				}
+				newsBiz.queryAllNews();
 			}
 			else if( chooseMenu == 2 ) {
-				System.out.println("새로운 기사를 등록하세요.");
-				System.out.println("뉴스 제목을 입력하세요.");
-				titleTemp = input.next();
-				System.out.println("언론사를 입력하세요.");
-				pressTemp = input.next();
-				System.out.println("기자 이름을 입력하세요.");
-				nameTemp = input.next();
-				
-				newsVO = new NewsVO();
-				newsVO.setTitle(titleTemp);
-				newsVO.setPress(pressTemp);
-				newsVO.setName(nameTemp);
-				
-				newsBiz.addNewNews(newsVO);
+				newsBiz.addNewNews();
 			}
 			else {
 				break;
