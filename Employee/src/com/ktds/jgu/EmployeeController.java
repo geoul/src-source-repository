@@ -36,6 +36,7 @@ public class EmployeeController {
 			System.out.println("2. 직원 추가(입사)");
 			System.out.println("3. 직원 삭제(퇴사)");
 			System.out.println("4. 직원 수정(진급)");
+			System.out.println("5. 종료");
 			System.out.println("=====================================");		
 			System.out.println("메뉴를 선택하세요.");
 			
