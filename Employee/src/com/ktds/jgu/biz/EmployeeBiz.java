@@ -3,9 +3,9 @@ package com.ktds.jgu.biz;
 import java.util.List;
 
 import com.ktds.jgu.vo.EmployeeVO;
-import com.ktds.jgu.vo.PositionVO;
+//import com.ktds.jgu.vo.PositionVO.*;
 
-public interface EmployeeBiz extends PositionVO {
+public interface EmployeeBiz {
 
 	/**
 	 * 전체 직원 조회하기

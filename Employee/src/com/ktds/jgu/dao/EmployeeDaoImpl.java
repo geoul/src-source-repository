@@ -9,11 +9,9 @@ import com.ktds.jgu.vo.PositionVO;
 public class EmployeeDaoImpl implements EmployeeDao{
 
 	private List<EmployeeVO> employeeList;
-	private List<PositionVO> positionList;
 	
 	public void EmployeeBizImpl() {
 		employeeList = new ArrayList<EmployeeVO>();
-		positionList = new ArrayList<PositionVO>();
 	}
 	
 	@Override

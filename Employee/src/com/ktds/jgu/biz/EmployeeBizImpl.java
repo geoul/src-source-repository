@@ -7,16 +7,14 @@ import java.util.Scanner;
 import com.ktds.jgu.dao.EmployeeDao;
 import com.ktds.jgu.dao.EmployeeDaoImpl;
 import com.ktds.jgu.vo.EmployeeVO;
-import com.ktds.jgu.vo.PositionVO;
+import com.ktds.jgu.vo.PositionVO.*;
 
 public class EmployeeBizImpl implements EmployeeBiz{
 
 	private List<EmployeeVO> employeeList; // 멤버변수
-	private List<PositionVO> positionList;
 	
 	public EmployeeBizImpl() {
 		employeeList = new ArrayList<EmployeeVO>(); // 멤버변수 초기화
-		positionList = new ArrayList<PositionVO>();
 	}
 	
 	@Override

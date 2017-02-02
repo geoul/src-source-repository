@@ -23,6 +23,7 @@ public class EmployeeController {
 		PositionVO positionVO = null;
 		
 		int employeeNumber = 0;
+		int positionConstants = 0;
 		
 		String employeeNameTemp = "";
 		String positionNameTemp = "";
@@ -51,8 +52,31 @@ public class EmployeeController {
 				System.out.println("새로운 직원 정보를 입력하세요.");
 				System.out.println("직원의 이름을 입력하세요.");
 				employeeNameTemp = input.next();
-				System.out.println("직원의 직급을 입력하세요.");
-				positionNameTemp = input.next();
+				System.out.println("직원의 직급을 입력하세요.(0:사원, 1:대리, 2:과장, 3:차장, 4:부장, 5:사장)");
+				positionConstants = input.nextInt();
+				if(positionConstants == 0) {
+					positionNameTemp = "사원";
+				}
+				else if(positionConstants == 1) {
+					positionNameTemp = "대리";
+				}
+				else if(positionConstants == 2) {
+					positionNameTemp = "과장";
+				}
+				else if(positionConstants == 3) {
+					positionNameTemp = "차장";
+				}
+				else if(positionConstants == 4) {
+					positionNameTemp = "부장";
+				}
+				else if(positionConstants == 5) {
+					positionNameTemp = "사장";
+				} 
+				else {
+					positionNameTemp = "";
+					System.out.println("직원의 직급을 잘못 입력하였습니다. 다시 입력하세요.");
+					positionConstants = input.nextInt();
+				}
 				System.out.println("직원의 연봉을 입력하세요.");
 				annualSalaryTemp = input.next();
 				System.out.println("직원이 소속된 부서를 입력하세요.");
@@ -80,8 +104,32 @@ public class EmployeeController {
 				System.out.println("수정할 직원 정보를 입력하세요.");
 				System.out.println("직원의 이름을 입력하세요.");
 				employeeNameTemp = input.next();
-				System.out.println("직원의 직급을 입력하세요.");
-				positionNameTemp = input.next();
+				System.out.println("직원의 직급을 입력하세요.(0:사원, 1:대리, 2:과장, 3:차장, 4:부장, 5:사장)");
+				positionConstants = input.nextInt();
+				if(positionConstants == 0) {
+					positionNameTemp = "사원";
+				}
+				else if(positionConstants == 1) {
+					positionNameTemp = "대리";
+				}
+				else if(positionConstants == 2) {
+					positionNameTemp = "과장";
+				}
+				else if(positionConstants == 3) {
+					positionNameTemp = "차장";
+				}
+				else if(positionConstants == 4) {
+					positionNameTemp = "부장";
+				}
+				else if(positionConstants == 5) {
+					positionNameTemp = "사장";
+				} 
+				else {
+					positionNameTemp = "";
+					System.out.println("직원의 직급을 잘못 입력하였습니다. 다시 입력하세요.");
+					positionConstants = input.nextInt();
+				}
+				
 				System.out.println("직원의 연봉을 입력하세요.");
 				annualSalaryTemp = input.next();
 				System.out.println("직원이 소속된 부서를 입력하세요.");
@@ -96,6 +144,7 @@ public class EmployeeController {
 				employeeBiz.updateEmployee(employeeNumber, employeeVO);
 			}
 			else {
+				System.out.println("프로그램을 종료합니다.");
 				break;
 			}
 		}
