@@ -18,6 +18,11 @@ public interface EmployeeDao extends PositionVO {
 	public void addEmployee(EmployeeVO newEmployee);
 	
 	/**
+	 * 직원 검색하기
+	 */
+	public EmployeeVO findOneEmployee(int index);
+	
+	/**
 	 * 직원 삭제하기(퇴사)
 	 */
 	public void deleteEmployee(int index);

@@ -10,12 +10,12 @@ public interface EmployeeBiz {
 	/**
 	 * 전체 직원 조회하기
 	 */
-	public List<EmployeeVO> seachAllEmployee();
+	public void seachAllEmployee();
 	
 	/**
 	 * 직원 추가하기(입사)
 	 */
-	public void addEmployee(EmployeeVO newEmployee);
+	public void addEmployee();
 	
 	/**
 	 * 직원 검색하기
@@ -25,11 +25,11 @@ public interface EmployeeBiz {
 	/**
 	 * 직원 삭제하기(퇴사)
 	 */
-	public void deleteEmployee(int index);
+	public void deleteEmployee();
 	
 	/**
 	 * 직원 수정하기(진급)
 	 */
-	public void updateEmployee(int index, EmployeeVO newEmployee);
+	public void updateEmployee();
 	
 }

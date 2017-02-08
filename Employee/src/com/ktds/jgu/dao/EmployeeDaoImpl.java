@@ -36,8 +36,12 @@ public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
 	public void updateEmployee(int index, EmployeeVO newEmployee) {
-		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public EmployeeVO findOneEmployee(int index) {
+		return null;
 	}
 	
 }
