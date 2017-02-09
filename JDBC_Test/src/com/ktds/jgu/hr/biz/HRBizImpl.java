@@ -1,9 +1,11 @@
 package com.ktds.jgu.hr.biz;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.ktds.jgu.hr.dao.HRDao;
 import com.ktds.jgu.hr.dao.HRDaoImpl;
+import com.ktds.jgu.hr.vo.CountriesVO;
 import com.ktds.jgu.hr.vo.DepartmentVO;
 import com.ktds.jgu.hr.vo.EmployeesVO;
 
@@ -35,6 +37,25 @@ public class HRBizImpl implements HRBiz {
 			, employeesVO.getManagerId()
 			, employeesVO.getDepartmentId());
 		}		
+	}
+	
+	// Ctrl + Space 해서 해당 메소드 고르면 됨.
+	@Override
+	public void printOneEmployees(int employeeId) {
+		EmployeesVO employees = hrDao.findOneEmployee(employeeId);
+		
+		System.out.printf("%d\t%s\t%s\t%s\t%s\t%s\t%s\t%d\t%f\t%d\t%d\n",
+				employees.getEmployeeId()
+				, employees.getFirstName()
+				, employees.getLastName()
+				, employees.getEmail()
+				, employees.getPhoneNumber()
+				, employees.getHireDate()
+				, employees.getJobId()
+				, employees.getSalary()
+				, employees.getCommissionPct()
+				, employees.getManagerId()
+				, employees.getDepartmentId());
 	}
 
 	@Override
@@ -104,6 +125,44 @@ public class HRBizImpl implements HRBiz {
 					, employeesVO.getJobs().getJobTitle()
 					, employeesVO.getJobs().getMinSalary()
 					, employeesVO.getJobs().getMaxSalary());
+			
+		}
+		
+	}
+
+	@Override
+	public void printAllDepartmentsWithLocations() {
+		
+		List<DepartmentVO> allDepartments = hrDao.getAllDepartmentsWithLocations();
+		
+		for ( DepartmentVO departmentsVO : allDepartments ) {
+			System.out.printf("%d\t%s\t%d\t%d\t%d\t%s\t%s\t%s\t%s\t%s\n"
+					, departmentsVO.getDepartmentId()
+					, departmentsVO.getDepartmentName()
+					, departmentsVO.getManagerId()
+					, departmentsVO.getLocationId()
+					, departmentsVO.getLocations().getLocationId()
+					, departmentsVO.getLocations().getStreetAddress()
+					, departmentsVO.getLocations().getPostalCode()
+					, departmentsVO.getLocations().getCity()
+					, departmentsVO.getLocations().getStateProvince()
+					, departmentsVO.getLocations().getCountryId());
+			
+		}
+	}
+
+	@Override
+	public void printAllCountriesWithRegions() {
+		
+		List<CountriesVO> allCountries = hrDao.getAllCountriesWithRegions();
+		
+		for ( CountriesVO countriesVO : allCountries ) {
+			System.out.printf("%s\t%s\t%d\t%d\t%s\n"
+					, countriesVO.getCountryId()
+					, countriesVO.getCountryName()
+					, countriesVO.getRegionId()
+					, countriesVO.getRegions().getRegionId()
+					, countriesVO.getRegions().getRegionName());
 			
 		}
 		

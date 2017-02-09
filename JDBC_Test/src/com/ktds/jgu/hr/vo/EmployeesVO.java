@@ -1,18 +1,41 @@
 package com.ktds.jgu.hr.vo;
 
+import com.ktds.mcj.dao.support.annotation.Types;
+
 public class EmployeesVO {
 
 	// 테이블 컬럼명을 변수로 적어주면 됨.
+	@Types
 	private int employeeId;
+	
+	@Types
 	private String firstName;
+	
+	@Types
 	private String lastName;
+	
+	@Types
 	private String email;
+	
+	@Types
 	private String phoneNumber;
+	
+	@Types
 	private String hireDate;
+	
+	@Types
 	private String jobId;
+	
+	@Types
 	private int salary;
+	
+	@Types
 	private double commissionPct;
+	
+	@Types
 	private int managerId;
+	
+	@Types
 	private int departmentId;
 	
 	// Join 하기 위해 테이블의 VO를 추가.
