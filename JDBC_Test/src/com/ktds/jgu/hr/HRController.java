@@ -17,11 +17,11 @@ public class HRController {
 	
 	public void start() {
 		hrBiz.printAllEmployees();
-//		hrBiz.printAllDepartments();
-//		hrBiz.printAllEmployeesWithDepartments();
-//		hrBiz.printAllEmployeesWithJobs();
-//		hrBiz.printAllDepartmentsWithLocations();
-//		hrBiz.printAllCountriesWithRegions();
+		hrBiz.printAllDepartments();
+		hrBiz.printAllEmployeesWithDepartments();
+		hrBiz.printAllEmployeesWithJobs();
+		hrBiz.printAllDepartmentsWithLocations();
+		hrBiz.printAllCountriesWithRegions();
 //		hrBiz.printOneEmployees(200); // 200번 사원의 데이터가 출력된다.
 	}
 	

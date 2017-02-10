@@ -1,6 +1,5 @@
 package com.ktds.jgu.hr.biz;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.ktds.jgu.hr.dao.HRDao;
