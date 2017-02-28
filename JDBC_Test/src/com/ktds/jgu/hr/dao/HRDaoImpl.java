@@ -85,11 +85,18 @@ public class HRDaoImpl extends JDBCDaoSupport implements HRDao {
 			conn = DriverManager.getConnection(oracleUrl, "HR", "HR");
 
 			// 4. 쿼리를 만든다.
-			String query = " SELECT " + " DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID "
-					+ " FROM HR.DEPARTMENTS ";
+			StringBuffer query = new StringBuffer();
+			query.append(" SELECT ");
+			query.append(" 			DEPARTMENT_ID ");
+			query.append(" 			, DEPARTMENT_NAME ");
+			query.append(" 			, MANAGER_ID ");
+			query.append(" 			, LOCATION_ID ");
+			query.append(" FROM		HR.DEPARTMENTS ");
+//			String query = " SELECT " + " DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID "
+//					+ " FROM HR.DEPARTMENTS ";
 
 			// 5. 쿼리를 실행한다.
-			stmt = conn.prepareStatement(query);
+			stmt = conn.prepareStatement(query.toString());
 
 			// 6. 쿼리의 실행결과를 얻어온다.
 			rs = stmt.executeQuery();
